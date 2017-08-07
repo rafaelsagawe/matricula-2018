@@ -65,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_sobre.resx">
+      <DependentUpon>Frm_sobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_splash.resx">
       <DependentUpon>Frm_splash.cs</DependentUpon>
     </EmbeddedResource>
