@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace matricula_2018
 {
-    public partial class Frm_splash : Form
+    public partial class Frm_cadAluno : Form
     {
-        public Frm_splash()
+        public Frm_cadAluno()
         {
             InitializeComponent();
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
+        private void Frm_cadAluno_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void tabPage6_Click(object sender, EventArgs e)
         {
-            Frm_login frm = new Frm_login();
-            frm.ShowDialog();
+
         }
     }
 }

@@ -16,5 +16,11 @@ namespace matricula_2018
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frm_cadAluno frm = new Frm_cadAluno();
+            frm.ShowDialog();
+        }
     }
 }
