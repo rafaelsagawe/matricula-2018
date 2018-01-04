@@ -463,7 +463,7 @@
             // órgão_EmissorLabel
             // 
             órgão_EmissorLabel.AutoSize = true;
-            órgão_EmissorLabel.Location = new System.Drawing.Point(44, 74);
+            órgão_EmissorLabel.Location = new System.Drawing.Point(44, 72);
             órgão_EmissorLabel.Name = "órgão_EmissorLabel";
             órgão_EmissorLabel.Size = new System.Drawing.Size(78, 13);
             órgão_EmissorLabel.TabIndex = 8;
@@ -472,7 +472,7 @@
             // data_De_Emissão_RGLabel
             // 
             data_De_Emissão_RGLabel.AutoSize = true;
-            data_De_Emissão_RGLabel.Location = new System.Drawing.Point(254, 51);
+            data_De_Emissão_RGLabel.Location = new System.Drawing.Point(254, 49);
             data_De_Emissão_RGLabel.Name = "data_De_Emissão_RGLabel";
             data_De_Emissão_RGLabel.Size = new System.Drawing.Size(111, 13);
             data_De_Emissão_RGLabel.TabIndex = 6;
@@ -481,7 +481,7 @@
             // uF_RGLabel
             // 
             uF_RGLabel.AutoSize = true;
-            uF_RGLabel.Location = new System.Drawing.Point(78, 48);
+            uF_RGLabel.Location = new System.Drawing.Point(78, 46);
             uF_RGLabel.Name = "uF_RGLabel";
             uF_RGLabel.Size = new System.Drawing.Size(43, 13);
             uF_RGLabel.TabIndex = 4;
@@ -490,7 +490,7 @@
             // cPFLabel
             // 
             cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(315, 21);
+            cPFLabel.Location = new System.Drawing.Point(315, 19);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(30, 13);
             cPFLabel.TabIndex = 2;
@@ -499,7 +499,7 @@
             // numero_Do_CADSUSLabel
             // 
             numero_Do_CADSUSLabel.AutoSize = true;
-            numero_Do_CADSUSLabel.Location = new System.Drawing.Point(6, 21);
+            numero_Do_CADSUSLabel.Location = new System.Drawing.Point(6, 19);
             numero_Do_CADSUSLabel.Name = "numero_Do_CADSUSLabel";
             numero_Do_CADSUSLabel.Size = new System.Drawing.Size(111, 13);
             numero_Do_CADSUSLabel.TabIndex = 0;
@@ -1123,7 +1123,7 @@
             // 
             // órgão_EmissorTextBox
             // 
-            this.órgão_EmissorTextBox.Location = new System.Drawing.Point(128, 71);
+            this.órgão_EmissorTextBox.Location = new System.Drawing.Point(128, 69);
             this.órgão_EmissorTextBox.Name = "órgão_EmissorTextBox";
             this.órgão_EmissorTextBox.Size = new System.Drawing.Size(100, 20);
             this.órgão_EmissorTextBox.TabIndex = 9;
@@ -1131,7 +1131,7 @@
             // data_De_Emissão_RGDateTimePicker
             // 
             this.data_De_Emissão_RGDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.data_De_Emissão_RGDateTimePicker.Location = new System.Drawing.Point(371, 47);
+            this.data_De_Emissão_RGDateTimePicker.Location = new System.Drawing.Point(371, 45);
             this.data_De_Emissão_RGDateTimePicker.Name = "data_De_Emissão_RGDateTimePicker";
             this.data_De_Emissão_RGDateTimePicker.Size = new System.Drawing.Size(88, 20);
             this.data_De_Emissão_RGDateTimePicker.TabIndex = 7;
@@ -1198,21 +1198,21 @@
             "SE - Sergipe",
             "SP - São Paulo",
             "TO - Tocantins"});
-            this.uF_RGComboBox.Location = new System.Drawing.Point(127, 45);
+            this.uF_RGComboBox.Location = new System.Drawing.Point(127, 43);
             this.uF_RGComboBox.Name = "uF_RGComboBox";
             this.uF_RGComboBox.Size = new System.Drawing.Size(121, 21);
             this.uF_RGComboBox.TabIndex = 5;
             // 
             // cPFTextBox
             // 
-            this.cPFTextBox.Location = new System.Drawing.Point(350, 18);
+            this.cPFTextBox.Location = new System.Drawing.Point(350, 16);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(109, 20);
             this.cPFTextBox.TabIndex = 3;
             // 
             // numero_Do_CADSUSTextBox
             // 
-            this.numero_Do_CADSUSTextBox.Location = new System.Drawing.Point(123, 18);
+            this.numero_Do_CADSUSTextBox.Location = new System.Drawing.Point(123, 16);
             this.numero_Do_CADSUSTextBox.Name = "numero_Do_CADSUSTextBox";
             this.numero_Do_CADSUSTextBox.Size = new System.Drawing.Size(128, 20);
             this.numero_Do_CADSUSTextBox.TabIndex = 1;
@@ -2019,16 +2019,18 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(31, 33);
+            this.tabControl1.Location = new System.Drawing.Point(8, 37);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(533, 326);
+            this.tabControl1.Size = new System.Drawing.Size(631, 248);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -2037,7 +2039,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(192, 74);
+            this.tabPage1.Size = new System.Drawing.Size(623, 222);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2048,9 +2050,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(525, 300);
+            this.tabPage2.Size = new System.Drawing.Size(623, 222);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Endereçamento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -2059,9 +2061,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(525, 300);
+            this.tabPage3.Size = new System.Drawing.Size(623, 222);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Documentos";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -2070,9 +2072,9 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(525, 300);
+            this.tabPage4.Size = new System.Drawing.Size(623, 222);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "NE";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage5
@@ -2081,9 +2083,9 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(525, 300);
+            this.tabPage5.Size = new System.Drawing.Size(623, 222);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Text = "Escola anterior";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage6
@@ -2092,9 +2094,9 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(525, 300);
+            this.tabPage6.Size = new System.Drawing.Size(623, 222);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.Text = "Responsaveis";
             this.tabPage6.UseVisualStyleBackColor = true;
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
@@ -2102,10 +2104,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 671);
+            this.ClientSize = new System.Drawing.Size(642, 289);
             this.Controls.Add(this.tabControl1);
             this.Name = "Frm_cadAluno";
-            this.Text = "Frm_cadAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Alunos";
             this.Load += new System.EventHandler(this.Frm_cadAluno_Load);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
