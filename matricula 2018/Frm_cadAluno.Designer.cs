@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nome_Completo_Do_ResponsávelLabel;
             System.Windows.Forms.Label nome_Completo_Do_PaiLabel;
             System.Windows.Forms.Label nome_Completo_Da_MãeLabel;
@@ -85,6 +86,7 @@
             System.Windows.Forms.Label numeroLabel;
             System.Windows.Forms.Label logradouroLabel;
             System.Windows.Forms.Label tipo_EndLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_cadAluno));
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.nome_Completo_Do_ResponsávelTextBox = new System.Windows.Forms.TextBox();
             this.nome_Completo_Do_PaiTextBox = new System.Windows.Forms.TextBox();
@@ -130,7 +132,6 @@
             this.idadeTextBox = new System.Windows.Forms.TextBox();
             this.data_De_NascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.sexoComboBox = new System.Windows.Forms.ComboBox();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tipo_da_escola_de_origemComboBox = new System.Windows.Forms.ComboBox();
@@ -159,6 +160,24 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.escolaDataSet = new Cadastro_de_Aluno.escolaDataSet();
+            this.cadAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cadAlunoTableAdapter = new Cadastro_de_Aluno.escolaDataSetTableAdapters.CadAlunoTableAdapter();
+            this.tableAdapterManager = new Cadastro_de_Aluno.escolaDataSetTableAdapters.TableAdapterManager();
+            this.cadAlunoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.cadAlunoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             nome_Completo_Do_ResponsávelLabel = new System.Windows.Forms.Label();
             nome_Completo_Do_PaiLabel = new System.Windows.Forms.Label();
             nome_Completo_Da_MãeLabel = new System.Windows.Forms.Label();
@@ -233,6 +252,10 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingNavigator)).BeginInit();
+            this.cadAlunoBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // nome_Completo_Do_ResponsávelLabel
@@ -1408,13 +1431,6 @@
             this.sexoComboBox.Size = new System.Drawing.Size(121, 21);
             this.sexoComboBox.TabIndex = 6;
             // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.Location = new System.Drawing.Point(50, 15);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(364, 20);
-            this.nomeTextBox.TabIndex = 1;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.groupBox3);
@@ -2027,10 +2043,10 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(8, 37);
+            this.tabControl1.Location = new System.Drawing.Point(8, 85);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(631, 248);
+            this.tabControl1.Size = new System.Drawing.Size(682, 248);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -2039,7 +2055,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(623, 222);
+            this.tabPage1.Size = new System.Drawing.Size(674, 222);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2100,11 +2116,164 @@
             this.tabPage6.UseVisualStyleBackColor = true;
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(50, 15);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(364, 20);
+            this.nomeTextBox.TabIndex = 1;
+            // 
+            // escolaDataSet
+            // 
+            this.escolaDataSet.DataSetName = "escolaDataSet";
+            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cadAlunoBindingSource
+            // 
+            this.cadAlunoBindingSource.DataMember = "CadAluno";
+            this.cadAlunoBindingSource.DataSource = this.escolaDataSet;
+            // 
+            // cadAlunoTableAdapter
+            // 
+            this.cadAlunoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CadAlunoTableAdapter = this.cadAlunoTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Cadastro_de_Aluno.escolaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cadAlunoBindingNavigator
+            // 
+            this.cadAlunoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.cadAlunoBindingNavigator.BindingSource = this.cadAlunoBindingSource;
+            this.cadAlunoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.cadAlunoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.cadAlunoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.cadAlunoBindingNavigatorSaveItem});
+            this.cadAlunoBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.cadAlunoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.cadAlunoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.cadAlunoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.cadAlunoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.cadAlunoBindingNavigator.Name = "cadAlunoBindingNavigator";
+            this.cadAlunoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.cadAlunoBindingNavigator.Size = new System.Drawing.Size(693, 25);
+            this.cadAlunoBindingNavigator.TabIndex = 18;
+            this.cadAlunoBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
+            // cadAlunoBindingNavigatorSaveItem
+            // 
+            this.cadAlunoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cadAlunoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("cadAlunoBindingNavigatorSaveItem.Image")));
+            this.cadAlunoBindingNavigatorSaveItem.Name = "cadAlunoBindingNavigatorSaveItem";
+            this.cadAlunoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.cadAlunoBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.cadAlunoBindingNavigatorSaveItem.Click += new System.EventHandler(this.cadAlunoBindingNavigatorSaveItem_Click);
+            // 
             // Frm_cadAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 289);
+            this.ClientSize = new System.Drawing.Size(693, 337);
+            this.Controls.Add(this.cadAlunoBindingNavigator);
             this.Controls.Add(this.tabControl1);
             this.Name = "Frm_cadAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2136,7 +2305,13 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingNavigator)).EndInit();
+            this.cadAlunoBindingNavigator.ResumeLayout(false);
+            this.cadAlunoBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2187,7 +2362,6 @@
         private System.Windows.Forms.TextBox idadeTextBox;
         private System.Windows.Forms.DateTimePicker data_De_NascimentoDateTimePicker;
         private System.Windows.Forms.ComboBox sexoComboBox;
-        private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox tipo_da_escola_de_origemComboBox;
@@ -2216,5 +2390,23 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TextBox nomeTextBox;
+        private Cadastro_de_Aluno.escolaDataSet escolaDataSet;
+        private System.Windows.Forms.BindingSource cadAlunoBindingSource;
+        private Cadastro_de_Aluno.escolaDataSetTableAdapters.CadAlunoTableAdapter cadAlunoTableAdapter;
+        private Cadastro_de_Aluno.escolaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator cadAlunoBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton cadAlunoBindingNavigatorSaveItem;
     }
 }

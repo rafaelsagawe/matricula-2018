@@ -22,5 +22,9 @@ namespace matricula_2018
             Frm_cadAluno frm = new Frm_cadAluno();
             frm.ShowDialog();
         }
+
+        private void btn_cancela_Click(object sender, EventArgs e)
+        {
+            Application.Exit();        }
     }
 }

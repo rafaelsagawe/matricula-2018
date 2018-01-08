@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cadastro_de_Aluno
 {
-    public partial class Frm_Prencipal : Form
+    public partial class Frm_Principal : Form
     {
-        public Frm_Prencipal()
+        public Frm_Principal()
         {
             InitializeComponent();
         }

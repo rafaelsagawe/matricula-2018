@@ -1,6 +1,6 @@
 ﻿namespace Cadastro_de_Aluno
 {
-    partial class Frm_Prencipal
+    partial class Frm_Principal
     {
         /// <summary>
         /// Required designer variable.

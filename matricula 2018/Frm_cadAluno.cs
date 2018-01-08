@@ -19,11 +19,23 @@ namespace matricula_2018
 
         private void Frm_cadAluno_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'escolaDataSet.CadAluno'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadAlunoTableAdapter.Fill(this.escolaDataSet.CadAluno);
+            // TODO: esta linha de código carrega dados na tabela 'escolaDataSet.CadAluno'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadAlunoTableAdapter.Fill(this.escolaDataSet.CadAluno);
 
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void cadAlunoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.cadAlunoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.escolaDataSet);
 
         }
     }
