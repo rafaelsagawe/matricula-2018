@@ -132,6 +132,9 @@
             this.idadeTextBox = new System.Windows.Forms.TextBox();
             this.data_De_NascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.sexoComboBox = new System.Windows.Forms.ComboBox();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.cadAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.escolaDataSet = new Cadastro_de_Aluno.escolaDataSet();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tipo_da_escola_de_origemComboBox = new System.Windows.Forms.ComboBox();
@@ -160,23 +163,20 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.escolaDataSet = new Cadastro_de_Aluno.escolaDataSet();
-            this.cadAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cadAlunoTableAdapter = new Cadastro_de_Aluno.escolaDataSetTableAdapters.CadAlunoTableAdapter();
             this.tableAdapterManager = new Cadastro_de_Aluno.escolaDataSetTableAdapters.TableAdapterManager();
             this.cadAlunoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.cadAlunoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             nome_Completo_Do_ResponsávelLabel = new System.Windows.Forms.Label();
             nome_Completo_Do_PaiLabel = new System.Windows.Forms.Label();
@@ -241,6 +241,8 @@
             this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -252,8 +254,6 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingNavigator)).BeginInit();
             this.cadAlunoBindingNavigator.SuspendLayout();
             this.SuspendLayout();
@@ -795,6 +795,7 @@
             // 
             // nome_Completo_Do_PaiTextBox
             // 
+            this.nome_Completo_Do_PaiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "nome_do_pai", true));
             this.nome_Completo_Do_PaiTextBox.Location = new System.Drawing.Point(181, 41);
             this.nome_Completo_Do_PaiTextBox.Name = "nome_Completo_Do_PaiTextBox";
             this.nome_Completo_Do_PaiTextBox.Size = new System.Drawing.Size(390, 20);
@@ -802,6 +803,7 @@
             // 
             // nome_Completo_Da_MãeTextBox
             // 
+            this.nome_Completo_Da_MãeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "nome_da_mae", true));
             this.nome_Completo_Da_MãeTextBox.Location = new System.Drawing.Point(181, 17);
             this.nome_Completo_Da_MãeTextBox.Name = "nome_Completo_Da_MãeTextBox";
             this.nome_Completo_Da_MãeTextBox.Size = new System.Drawing.Size(390, 20);
@@ -975,6 +977,7 @@
             // portador_De_Necessidade_EspecialCheckBox
             // 
             this.portador_De_Necessidade_EspecialCheckBox.AutoSize = true;
+            this.portador_De_Necessidade_EspecialCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.cadAlunoBindingSource, "NE", true));
             this.portador_De_Necessidade_EspecialCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.portador_De_Necessidade_EspecialCheckBox.Location = new System.Drawing.Point(190, 16);
             this.portador_De_Necessidade_EspecialCheckBox.Name = "portador_De_Necessidade_EspecialCheckBox";
@@ -1032,6 +1035,7 @@
             "Casamento "});
             this.tipo_CertidãoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tipo_CertidãoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.tipo_CertidãoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "tipo", true));
             this.tipo_CertidãoComboBox.FormattingEnabled = true;
             this.tipo_CertidãoComboBox.Items.AddRange(new object[] {
             "Nascimento",
@@ -1073,6 +1077,7 @@
             "TO - Tocantins"});
             this.uF_CertidãoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.uF_CertidãoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.uF_CertidãoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "uf", true));
             this.uF_CertidãoComboBox.FormattingEnabled = true;
             this.uF_CertidãoComboBox.Items.AddRange(new object[] {
             "AC - Acre",
@@ -1109,6 +1114,7 @@
             // 
             // data_De_Emissão_CertidãoDateTimePicker
             // 
+            this.data_De_Emissão_CertidãoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.cadAlunoBindingSource, "data_certidao", true));
             this.data_De_Emissão_CertidãoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.data_De_Emissão_CertidãoDateTimePicker.Location = new System.Drawing.Point(155, 81);
             this.data_De_Emissão_CertidãoDateTimePicker.Name = "data_De_Emissão_CertidãoDateTimePicker";
@@ -1118,6 +1124,7 @@
             // 
             // livroTextBox
             // 
+            this.livroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "livro", true));
             this.livroTextBox.Location = new System.Drawing.Point(361, 50);
             this.livroTextBox.Name = "livroTextBox";
             this.livroTextBox.Size = new System.Drawing.Size(202, 20);
@@ -1125,6 +1132,7 @@
             // 
             // folhaTextBox
             // 
+            this.folhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "folha", true));
             this.folhaTextBox.Location = new System.Drawing.Point(217, 50);
             this.folhaTextBox.Name = "folhaTextBox";
             this.folhaTextBox.Size = new System.Drawing.Size(100, 20);
@@ -1132,6 +1140,7 @@
             // 
             // termoTextBox
             // 
+            this.termoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "termo", true));
             this.termoTextBox.Location = new System.Drawing.Point(58, 50);
             this.termoTextBox.Name = "termoTextBox";
             this.termoTextBox.Size = new System.Drawing.Size(100, 20);
@@ -1139,6 +1148,7 @@
             // 
             // certidão_Civil_CartórioTextBox
             // 
+            this.certidão_Civil_CartórioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "certidao_civil", true));
             this.certidão_Civil_CartórioTextBox.Location = new System.Drawing.Point(125, 19);
             this.certidão_Civil_CartórioTextBox.Name = "certidão_Civil_CartórioTextBox";
             this.certidão_Civil_CartórioTextBox.Size = new System.Drawing.Size(192, 20);
@@ -1153,6 +1163,7 @@
             // 
             // data_De_Emissão_RGDateTimePicker
             // 
+            this.data_De_Emissão_RGDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.cadAlunoBindingSource, "data_rg", true));
             this.data_De_Emissão_RGDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.data_De_Emissão_RGDateTimePicker.Location = new System.Drawing.Point(371, 45);
             this.data_De_Emissão_RGDateTimePicker.Name = "data_De_Emissão_RGDateTimePicker";
@@ -1192,6 +1203,7 @@
             "TO - Tocantins"});
             this.uF_RGComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.uF_RGComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.uF_RGComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "uf_rg", true));
             this.uF_RGComboBox.FormattingEnabled = true;
             this.uF_RGComboBox.Items.AddRange(new object[] {
             "AC - Acre",
@@ -1228,6 +1240,7 @@
             // 
             // cPFTextBox
             // 
+            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "cpf", true));
             this.cPFTextBox.Location = new System.Drawing.Point(350, 16);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(109, 20);
@@ -1235,6 +1248,7 @@
             // 
             // numero_Do_CADSUSTextBox
             // 
+            this.numero_Do_CADSUSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "numero_Do_CADSUS", true));
             this.numero_Do_CADSUSTextBox.Location = new System.Drawing.Point(123, 16);
             this.numero_Do_CADSUSTextBox.Name = "numero_Do_CADSUSTextBox";
             this.numero_Do_CADSUSTextBox.Size = new System.Drawing.Size(128, 20);
@@ -1293,6 +1307,7 @@
             this.nacionalidade_Do_AlunoComboBox.AutoCompleteCustomSource.AddRange(new string[] {
             "Brasileira",
             "Estrangeira "});
+            this.nacionalidade_Do_AlunoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "nalionalidade_aluno", true));
             this.nacionalidade_Do_AlunoComboBox.FormattingEnabled = true;
             this.nacionalidade_Do_AlunoComboBox.Items.AddRange(new object[] {
             "Brasileira",
@@ -1304,6 +1319,7 @@
             // 
             // corComboBox
             // 
+            this.corComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "cor", true));
             this.corComboBox.FormattingEnabled = true;
             this.corComboBox.Items.AddRange(new object[] {
             "Branca",
@@ -1319,6 +1335,7 @@
             // 
             // pais_de_OrigemTextBox
             // 
+            this.pais_de_OrigemTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "estado_nascimento", true));
             this.pais_de_OrigemTextBox.Location = new System.Drawing.Point(452, 43);
             this.pais_de_OrigemTextBox.Name = "pais_de_OrigemTextBox";
             this.pais_de_OrigemTextBox.Size = new System.Drawing.Size(121, 20);
@@ -1356,6 +1373,7 @@
             "TO - Tocantins"});
             this.uF_De_NascimentoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.uF_De_NascimentoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.uF_De_NascimentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "estado_nascimento", true));
             this.uF_De_NascimentoComboBox.FormattingEnabled = true;
             this.uF_De_NascimentoComboBox.Items.AddRange(new object[] {
             "AC - Acre",
@@ -1392,6 +1410,7 @@
             // 
             // município_De_NascimentoTextBox
             // 
+            this.município_De_NascimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "MunicipioDeNasimento", true));
             this.município_De_NascimentoTextBox.Location = new System.Drawing.Point(142, 16);
             this.município_De_NascimentoTextBox.Name = "município_De_NascimentoTextBox";
             this.município_De_NascimentoTextBox.Size = new System.Drawing.Size(230, 20);
@@ -1407,6 +1426,7 @@
             // data_De_NascimentoDateTimePicker
             // 
             this.data_De_NascimentoDateTimePicker.CustomFormat = "";
+            this.data_De_NascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.cadAlunoBindingSource, "dataNascimento", true));
             this.data_De_NascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.data_De_NascimentoDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.On;
             this.data_De_NascimentoDateTimePicker.Location = new System.Drawing.Point(121, 41);
@@ -1422,6 +1442,7 @@
             "Masculino"});
             this.sexoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.sexoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.sexoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "sexo", true));
             this.sexoComboBox.FormattingEnabled = true;
             this.sexoComboBox.Items.AddRange(new object[] {
             "Feminino",
@@ -1430,6 +1451,24 @@
             this.sexoComboBox.Name = "sexoComboBox";
             this.sexoComboBox.Size = new System.Drawing.Size(121, 21);
             this.sexoComboBox.TabIndex = 6;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(50, 15);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(364, 20);
+            this.nomeTextBox.TabIndex = 1;
+            // 
+            // cadAlunoBindingSource
+            // 
+            this.cadAlunoBindingSource.DataMember = "CadAluno";
+            this.cadAlunoBindingSource.DataSource = this.escolaDataSet;
+            // 
+            // escolaDataSet
+            // 
+            this.escolaDataSet.DataSetName = "escolaDataSet";
+            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox4
             // 
@@ -1516,6 +1555,7 @@
             "TO - Tocantins"});
             this.uF_da_Escola_de_origemComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.uF_da_Escola_de_origemComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.uF_da_Escola_de_origemComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "uf_ue_anterio", true));
             this.uF_da_Escola_de_origemComboBox.FormattingEnabled = true;
             this.uF_da_Escola_de_origemComboBox.Items.AddRange(new object[] {
             "AC - Acre",
@@ -1552,6 +1592,7 @@
             // 
             // municípioTextBox
             // 
+            this.municípioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "municipio", true));
             this.municípioTextBox.Location = new System.Drawing.Point(113, 66);
             this.municípioTextBox.Name = "municípioTextBox";
             this.municípioTextBox.Size = new System.Drawing.Size(460, 20);
@@ -1559,6 +1600,7 @@
             // 
             // escola_De_OrigemTextBox
             // 
+            this.escola_De_OrigemTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "escola_anterio", true));
             this.escola_De_OrigemTextBox.Location = new System.Drawing.Point(111, 39);
             this.escola_De_OrigemTextBox.Name = "escola_De_OrigemTextBox";
             this.escola_De_OrigemTextBox.Size = new System.Drawing.Size(462, 20);
@@ -1618,6 +1660,7 @@
             // 
             // e_mailTextBox
             // 
+            this.e_mailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "email", true));
             this.e_mailTextBox.Location = new System.Drawing.Point(124, 41);
             this.e_mailTextBox.Name = "e_mailTextBox";
             this.e_mailTextBox.Size = new System.Drawing.Size(449, 20);
@@ -1625,6 +1668,7 @@
             // 
             // recadoTextBox
             // 
+            this.recadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "recado", true));
             this.recadoTextBox.Location = new System.Drawing.Point(460, 14);
             this.recadoTextBox.Name = "recadoTextBox";
             this.recadoTextBox.Size = new System.Drawing.Size(113, 20);
@@ -1632,6 +1676,7 @@
             // 
             // celularTextBox
             // 
+            this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "celular", true));
             this.celularTextBox.Location = new System.Drawing.Point(290, 14);
             this.celularTextBox.Name = "celularTextBox";
             this.celularTextBox.Size = new System.Drawing.Size(100, 20);
@@ -1639,6 +1684,7 @@
             // 
             // telefone_ResidencialTextBox
             // 
+            this.telefone_ResidencialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "tel_residencial", true));
             this.telefone_ResidencialTextBox.Location = new System.Drawing.Point(124, 14);
             this.telefone_ResidencialTextBox.Name = "telefone_ResidencialTextBox";
             this.telefone_ResidencialTextBox.Size = new System.Drawing.Size(100, 20);
@@ -1712,6 +1758,7 @@
             // 
             // cEPTextBox
             // 
+            this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "cep", true));
             this.cEPTextBox.Location = new System.Drawing.Point(83, 95);
             this.cEPTextBox.Name = "cEPTextBox";
             this.cEPTextBox.Size = new System.Drawing.Size(107, 20);
@@ -1719,6 +1766,7 @@
             // 
             // cidadeTextBox
             // 
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "cidade", true));
             this.cidadeTextBox.Location = new System.Drawing.Point(271, 95);
             this.cidadeTextBox.Name = "cidadeTextBox";
             this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
@@ -1987,6 +2035,7 @@
             "Vista Alegre"});
             this.bairroTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.bairroTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "bairro", true));
             this.bairroTextBox.Location = new System.Drawing.Point(417, 69);
             this.bairroTextBox.Name = "bairroTextBox";
             this.bairroTextBox.Size = new System.Drawing.Size(168, 20);
@@ -1994,6 +2043,7 @@
             // 
             // complementoTextBox
             // 
+            this.complementoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "complemento", true));
             this.complementoTextBox.Location = new System.Drawing.Point(271, 69);
             this.complementoTextBox.Name = "complementoTextBox";
             this.complementoTextBox.Size = new System.Drawing.Size(100, 20);
@@ -2001,6 +2051,7 @@
             // 
             // numeroTextBox
             // 
+            this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "numero", true));
             this.numeroTextBox.Location = new System.Drawing.Point(83, 69);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(107, 20);
@@ -2010,6 +2061,7 @@
             // 
             this.logradouroTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.logradouroTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.logradouroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "logradouro", true));
             this.logradouroTextBox.Location = new System.Drawing.Point(83, 45);
             this.logradouroTextBox.Name = "logradouroTextBox";
             this.logradouroTextBox.Size = new System.Drawing.Size(502, 20);
@@ -2023,6 +2075,7 @@
             "Rua"});
             this.tipo_EndComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tipo_EndComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.tipo_EndComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "tipo_end", true));
             this.tipo_EndComboBox.FormattingEnabled = true;
             this.tipo_EndComboBox.Items.AddRange(new object[] {
             "Alameda",
@@ -2088,7 +2141,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(623, 222);
+            this.tabPage4.Size = new System.Drawing.Size(620, 222);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "NE";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2099,7 +2152,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(623, 222);
+            this.tabPage5.Size = new System.Drawing.Size(620, 222);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Escola anterior";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2110,29 +2163,11 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(623, 222);
+            this.tabPage6.Size = new System.Drawing.Size(620, 222);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Responsaveis";
             this.tabPage6.UseVisualStyleBackColor = true;
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadAlunoBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(50, 15);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(364, 20);
-            this.nomeTextBox.TabIndex = 1;
-            // 
-            // escolaDataSet
-            // 
-            this.escolaDataSet.DataSetName = "escolaDataSet";
-            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cadAlunoBindingSource
-            // 
-            this.cadAlunoBindingSource.DataMember = "CadAluno";
-            this.cadAlunoBindingSource.DataSource = this.escolaDataSet;
             // 
             // cadAlunoTableAdapter
             // 
@@ -2174,6 +2209,31 @@
             this.cadAlunoBindingNavigator.TabIndex = 18;
             this.cadAlunoBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -2206,17 +2266,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -2224,7 +2277,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
             // 
             // bindingNavigatorMoveLastItem
@@ -2233,38 +2286,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // cadAlunoBindingNavigatorSaveItem
             // 
             this.cadAlunoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.cadAlunoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("cadAlunoBindingNavigatorSaveItem.Image")));
             this.cadAlunoBindingNavigatorSaveItem.Name = "cadAlunoBindingNavigatorSaveItem";
-            this.cadAlunoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.cadAlunoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.cadAlunoBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.cadAlunoBindingNavigatorSaveItem.Click += new System.EventHandler(this.cadAlunoBindingNavigatorSaveItem_Click);
             // 
@@ -2291,6 +2326,8 @@
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -2305,8 +2342,6 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingNavigator)).EndInit();
             this.cadAlunoBindingNavigator.ResumeLayout(false);
             this.cadAlunoBindingNavigator.PerformLayout();
