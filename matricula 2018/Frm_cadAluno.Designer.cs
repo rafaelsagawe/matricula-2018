@@ -997,7 +997,7 @@
             this.groupBox8.Controls.Add(this.numero_Do_CADSUSTextBox);
             this.groupBox8.Location = new System.Drawing.Point(6, 13);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(583, 216);
+            this.groupBox8.Size = new System.Drawing.Size(583, 205);
             this.groupBox8.TabIndex = 14;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Documentos";
@@ -2043,7 +2043,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(8, 85);
+            this.tabControl1.Location = new System.Drawing.Point(8, 91);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(628, 248);
@@ -2066,7 +2066,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(623, 222);
+            this.tabPage2.Size = new System.Drawing.Size(620, 222);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Endereçamento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2077,7 +2077,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(623, 222);
+            this.tabPage3.Size = new System.Drawing.Size(620, 222);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Documentos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2272,7 +2272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 337);
+            this.ClientSize = new System.Drawing.Size(639, 343);
             this.Controls.Add(this.cadAlunoBindingNavigator);
             this.Controls.Add(this.tabControl1);
             this.Name = "Frm_cadAluno";
