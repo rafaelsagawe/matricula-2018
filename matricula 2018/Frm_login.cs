@@ -26,5 +26,20 @@ namespace matricula_2018
         private void btn_cancela_Click(object sender, EventArgs e)
         {
             Application.Exit();        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Tbx_senha.Text == "123456")
+            {
+                Frm_cadAluno frm = new Frm_cadAluno();
+                frm.Show();
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Usuario ou senha errada", "Ocorreu um erro na Autenticação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }

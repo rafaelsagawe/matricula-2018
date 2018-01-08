@@ -90,6 +90,8 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.nome_Completo_Do_ResponsávelTextBox = new System.Windows.Forms.TextBox();
             this.nome_Completo_Do_PaiTextBox = new System.Windows.Forms.TextBox();
+            this.cadAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.escolaDataSet = new Cadastro_de_Aluno.escolaDataSet();
             this.nome_Completo_Da_MãeTextBox = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.hiperatividadeCheckBox = new System.Windows.Forms.CheckBox();
@@ -133,8 +135,6 @@
             this.data_De_NascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.sexoComboBox = new System.Windows.Forms.ComboBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.cadAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.escolaDataSet = new Cadastro_de_Aluno.escolaDataSet();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tipo_da_escola_de_origemComboBox = new System.Windows.Forms.ComboBox();
@@ -178,6 +178,8 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cadAlunoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.tSB_Relatorio = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             nome_Completo_Do_ResponsávelLabel = new System.Windows.Forms.Label();
             nome_Completo_Do_PaiLabel = new System.Windows.Forms.Label();
             nome_Completo_Da_MãeLabel = new System.Windows.Forms.Label();
@@ -236,13 +238,13 @@
             logradouroLabel = new System.Windows.Forms.Label();
             tipo_EndLabel = new System.Windows.Forms.Label();
             this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
             this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -800,6 +802,16 @@
             this.nome_Completo_Do_PaiTextBox.Name = "nome_Completo_Do_PaiTextBox";
             this.nome_Completo_Do_PaiTextBox.Size = new System.Drawing.Size(390, 20);
             this.nome_Completo_Do_PaiTextBox.TabIndex = 3;
+            // 
+            // cadAlunoBindingSource
+            // 
+            this.cadAlunoBindingSource.DataMember = "CadAluno";
+            this.cadAlunoBindingSource.DataSource = this.escolaDataSet;
+            // 
+            // escolaDataSet
+            // 
+            this.escolaDataSet.DataSetName = "escolaDataSet";
+            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nome_Completo_Da_MãeTextBox
             // 
@@ -1460,16 +1472,6 @@
             this.nomeTextBox.Size = new System.Drawing.Size(364, 20);
             this.nomeTextBox.TabIndex = 1;
             // 
-            // cadAlunoBindingSource
-            // 
-            this.cadAlunoBindingSource.DataMember = "CadAluno";
-            this.cadAlunoBindingSource.DataSource = this.escolaDataSet;
-            // 
-            // escolaDataSet
-            // 
-            this.escolaDataSet.DataSetName = "escolaDataSet";
-            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.groupBox3);
@@ -2096,7 +2098,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(8, 91);
+            this.tabControl1.Location = new System.Drawing.Point(9, 83);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(628, 248);
@@ -2197,7 +2199,9 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.cadAlunoBindingNavigatorSaveItem});
+            this.cadAlunoBindingNavigatorSaveItem,
+            this.toolStripSeparator1,
+            this.tSB_Relatorio});
             this.cadAlunoBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.cadAlunoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.cadAlunoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -2303,6 +2307,20 @@
             this.cadAlunoBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.cadAlunoBindingNavigatorSaveItem.Click += new System.EventHandler(this.cadAlunoBindingNavigatorSaveItem_Click);
             // 
+            // tSB_Relatorio
+            // 
+            this.tSB_Relatorio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tSB_Relatorio.Image = ((System.Drawing.Image)(resources.GetObject("tSB_Relatorio.Image")));
+            this.tSB_Relatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tSB_Relatorio.Name = "tSB_Relatorio";
+            this.tSB_Relatorio.Size = new System.Drawing.Size(23, 22);
+            this.tSB_Relatorio.Text = "toolStripButton1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // Frm_cadAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2316,6 +2334,8 @@
             this.Load += new System.EventHandler(this.Frm_cadAluno_Load);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -2326,8 +2346,6 @@
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cadAlunoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -2443,5 +2461,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton cadAlunoBindingNavigatorSaveItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton tSB_Relatorio;
     }
 }
