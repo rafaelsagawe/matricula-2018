@@ -2046,7 +2046,7 @@
             this.tabControl1.Location = new System.Drawing.Point(8, 85);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(682, 248);
+            this.tabControl1.Size = new System.Drawing.Size(628, 248);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -2055,7 +2055,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(674, 222);
+            this.tabPage1.Size = new System.Drawing.Size(620, 222);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2170,7 +2170,7 @@
             this.cadAlunoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cadAlunoBindingNavigator.Name = "cadAlunoBindingNavigator";
             this.cadAlunoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cadAlunoBindingNavigator.Size = new System.Drawing.Size(693, 25);
+            this.cadAlunoBindingNavigator.Size = new System.Drawing.Size(639, 25);
             this.cadAlunoBindingNavigator.TabIndex = 18;
             this.cadAlunoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -2272,7 +2272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 337);
+            this.ClientSize = new System.Drawing.Size(639, 337);
             this.Controls.Add(this.cadAlunoBindingNavigator);
             this.Controls.Add(this.tabControl1);
             this.Name = "Frm_cadAluno";
